@@ -12,6 +12,20 @@ POSTGRES_DB=cookbookdb
 POSTGRES_HOST=localhost
 POSTGRES_PORT=5432
 ```
+
+Запуск Postgres
+```bash
+docker compose -f "docker-compose.dev.yml" up -d
+```
+Миграции
+```bash
+alembic upgrade head
+```
+
+RUN
 ```bash
 uv install
+uv run fastapi dev
 ```
+
+RUFF JUST
