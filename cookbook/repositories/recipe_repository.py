@@ -32,7 +32,7 @@ class RecipeRepository:
 
     @staticmethod
     async def delete(db: AsyncSession, recipe: Recipe):
-        db.delete(recipe)
+        await db.delete(recipe)
 
     @staticmethod
     async def update(db: AsyncSession, recipe: Recipe):

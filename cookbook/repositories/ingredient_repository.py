@@ -31,4 +31,4 @@ class IngredientRepository:
 
     @staticmethod
     async def delete(db: AsyncSession, ingredient: Ingredient):
-        db.delete(ingredient)
+        await db.delete(ingredient)
