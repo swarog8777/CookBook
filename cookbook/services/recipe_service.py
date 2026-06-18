@@ -20,7 +20,7 @@ async def create_recipe_service(data: RecipeCreate, db: AsyncSession):
 
     try:
         for ing_data in data.ingredients:
-            ingredient = await IngredientRepository.get_by_name(db, ing_data.name)
+            ingredient = await IngredientRepository.get_by_name(db, ing_data["name"])
             if ingredient is None:
                 ingredient = Ingredient(name=ing_data.name)
                 await IngredientRepository.create(db, ingredient)
